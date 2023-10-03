@@ -13,9 +13,10 @@ function Home() {
       <main className="container">
         <h1>Home</h1>
         <h3>Chimkin Numgies</h3>
-        <Item title='Title 1'/>
-        <Item title='Title 2'/>
-        <Item title='Title 3'/>
+        <Item title='GameScape'/>
+        <Item title='Versus Games'/>
+        <Item title='Game Post SF'/>
+        <Item title='D20 Games Alameda'/>
       </main>
     </>
   );
