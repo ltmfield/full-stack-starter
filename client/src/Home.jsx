@@ -12,7 +12,6 @@ function Home() {
       </Helmet>
       <main className="container">
         <h1>Home</h1>
-        <h3>Chimkin Numgies</h3>
         <Item title='GameScape'/>
         <Item title='Versus Games'/>
         <Item title='Game Post SF'/>
