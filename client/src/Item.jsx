@@ -1,23 +1,16 @@
 import { Link } from 'react-router-dom';
+import { useAuthContext } from './AuthContext';
 
+function Item({ id, title, imageUrl }) {
+  const { user } = useAuthContext();
 
-function Item({ title, imgHolder, id}) {
-    return <div className='container'>
-        <div className='row'>
-        <div className="col-xl-4 justify-content-center">
-            <div className="card">
-                <img className='cardImage' src={imgHolder}/>
-            <div className='card-body'>
-            <h4 className='card-title generalText'>
-                {title} <Link to={`/detail/${id}`}>View More</Link>
-            </h4>
-            </div>
-            </div>
-
-                </div>
-            </div>
-         </div>;
+  return (
+    <div className="card mb-3">
+      <img src={imageUrl} className="card-img-top" />
+      {id}: {title} <Link to={`/detail/${id}`}>View More</Link>
+      {user && <Link to={`/items/${id}/edit`}>Edit</Link>}
+    </div>
+  );
 }
-
 
 export default Item;
